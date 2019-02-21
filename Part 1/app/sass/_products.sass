@@ -1,0 +1,39 @@
+.products
+    &-slider
+        margin: 0 auto
+        &-item
+            opacity: 0.5
+            padding-top: 30px
+            &.slick-current
+                opacity: 1
+            &-content
+                width: 100%
+                display: flex
+                flex-direction: column
+                align-items: center
+                &__img
+                    position: relative
+                    & img
+                        height: 277px
+                        width: auto
+                    &.labelled:before
+                        position: absolute
+                        content: ''
+                        display: block
+                        background: url(../img/products/items/item-discount-label.png) center no-repeat
+                        width: 55px
+                        height: 81px
+                        left: -6px
+                        top: -14px
+                &-price
+                    text-align: center
+                    margin-top: 4px
+                    &__new
+                        font-size: 1.7em
+                        font-family: $semibold-font
+                        margin-top: 3px
+                    &__old
+                        font-family: $default-font
+                        text-decoration: line-through
+                        color: #888888
+                        font-size: 1.5em

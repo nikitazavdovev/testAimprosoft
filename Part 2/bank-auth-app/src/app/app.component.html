@@ -1,0 +1,29 @@
+<form [formGroup]="authForm" (ngSubmit)="onSubmit()" class="form">
+  <div class="form-header">
+    <b>Bank</b>Support Portal
+  </div>
+  <div class="form-wrap">
+    <div class="form-input form-wrap__name" [ngClass]="{ 'invalid-enter': submitted && f.name.errors }" >
+      <label class="form-input_prepend form-wrap__name_prepend" for="name"><i class="fas fa-user"></i></label>
+        <input type="text" id="name" formControlName="name"/>
+        <div *ngIf="submitted && f.name.errors" class="invalid-message">
+          <div *ngIf="f.name.errors.required">Invalid Username</div>
+        </div>
+      </div>
+      <div class="form-input form-wrap__pass" [ngClass]="{ 'invalid-enter': submitted && f.password.errors }">
+        <label class="form-input_prepend form-wrap__pass_prepend" for="pass"><i class="fas fa-lock"></i></label>
+          <input type="password" id="pass" formControlName="password" class="form-wrap__pass" />
+          <div *ngIf="submitted && f.password.errors" class="invalid-message">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+            <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+          </div>
+      </div>
+    <div class="form-wrap-button">
+        <button class="form-wrap-button__btn">Login</button>
+    </div>
+    <div class="form-wrap-forgot">
+        Forgot your password? <a href="#">Reset it here.</a>
+    </div>
+  </div>
+</form>
+

@@ -1,0 +1,92 @@
+*:focus {
+    outline: 0;
+}
+.form {
+    width: 440px;
+    margin: auto;
+    margin-top: 50px;
+}
+.form-header {
+    padding-left: 74px;
+    padding-bottom: 33px;
+    font-size: 18px;
+    color: #666666;
+}
+.form-header > b {
+    color: #2fa2c3;
+    font-size: 41px;
+    font-weight: 700;
+}
+.form-wrap {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(153, 153, 153, 0.33);
+    border-radius: 5px;
+    padding: 40px 75px;
+}
+.form-wrap__name > input {
+    flex-grow: 1;
+    border: none;
+    border-radius: 5px;
+}
+.form-wrap__pass > input {
+    flex-grow: 1;
+    border: none;
+    border-radius: 5px;    
+}
+.form-input {
+    display: flex;
+    position: relative;
+    margin-bottom: 42px;
+    border: 1px solid rgba(153, 153, 153, 0.28);
+    height: 40px;
+    border-radius: 5px;
+}
+.form-input_prepend {
+    height: 100%;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+}
+.invalid-enter {
+    border-color: red;
+}
+.invalid-enter:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: -15px;
+    bottom: 50%;
+    transform: translateY(5px);
+    color: red;
+    height: 10px;
+    width: 10px;
+    background: url(../app/img/invalid-img.png) no-repeat center;
+}
+.invalid-message {
+    color: red;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 100%;
+}
+.form-wrap-button__btn {
+    background-color: #36a2c1;
+    font-size: 18px;
+    padding: 13px 26px;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+.form-wrap-forgot {
+    margin-top: 17px;
+    font-size: 12px;
+    color: #666666;
+}
+.form-wrap-forgot > a {
+    text-decoration: none;
+    color: #36a2c1;
+}

@@ -1,0 +1,28 @@
+.section-title
+    padding-top: 25px
+    color: #393939
+    &__content
+        display: inline-block
+        font-size: 1.8em
+        position: relative
+        font-family: $medium-font
+        &:before
+            position: absolute
+            display: block
+            content: ''
+            width: 42px
+            height: 8px
+            top: 50%
+            transform: translateY(-4px)
+            background: url(..\img\products\header\products-header-decoration.png) center no-repeat
+            right: 110%
+        &:after
+            position: absolute
+            display: block
+            content: ''
+            width: 42px
+            height: 8px
+            top: 50%
+            background: url(..\img\products\header\products-header-decoration.png) center no-repeat
+            left: 110%
+            transform: rotateZ(180deg) rotateX(180deg) translateY(-4px)
